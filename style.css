@@ -26,10 +26,11 @@ a{
 
 h3{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: sans-serif;
     font-weight: 700;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 #menu{
@@ -120,9 +121,10 @@ h3{
     text-align: center;
     padding: 20px 20px 0px;
 }
-#newsletter{
+#newsletter h3{
     color: black;
     margin-bottom: 30px;
+    font-size: 30px;
 }
 
 /* grid fotos clientes */
@@ -170,11 +172,11 @@ h3{
     height: 100%;
     object-fit: cover;
 }
-.progeu{
+.iltrento{
     grid-area: progeu;
     position: relative;
 }
-.progeu img{
+.iltrento img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -194,21 +196,33 @@ h3{
     object-fit: cover;
 }
 
-/*productos*/
+/*solapa productos*/
+#productos{
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(img/portadavino.jpg);
+    background-size: cover; 
+    background-position: center; 
+}
+#productos h2 {
+    font-size: 50px;
+    color: #f6f5f5;
+    margin-bottom: 10px;
+}
 .contenedor-productos{
     display: flex;
     margin-top: 100px;
     margin-left: 100px;
 }
-
 .productowine{
-    width: 60%;
+    width: 80%;
 }
 .productobirra{
-    width: 60%;
+    width: 80%;
 }
 .productogin{
-    width: 60%;
+    width: 80%;
 }
 .productocheers{
     width: 80%;
@@ -222,13 +236,79 @@ h3{
     background-color: black;
     color:white;
 }
-   
-.formulario{
+
+/* solapa contacto */  
+#contacto {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(img/portada-gin.jpg); 
+    background-size: cover; 
+    background-position: center; 
+}
+ 
+#contacto h2 {
+    font-size: 50px;
+    color: #f6f5f5;
+    margin-bottom: 10px;
+}
+  
+#contacto p {
+    color: #666;
+    margin-bottom: 0px;
+}
+  
+/* estilo para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+  
+.formulario select {
+    height: 40px;
+}
+  
+.formulario input[type="submit"] {
     background-color: black;
     color: white;
-    width: 700px;
-    margin: 20px auto 20px auto;
-    padding: 20px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+  
+.formulario input[type="submit"]:hover {
+    background-color: #45a049;
+}
+#mapa{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+.contenedorempresas{
+    text-align: center;   
 }
