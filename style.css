@@ -52,59 +52,83 @@ h3{
 }
 
 .contenedor-carrousel{
-    width: 100%;
+  max-width: 100%;     
+  overflow: hidden;
 }
-
-#carouselExampleAutoplaying{
+#carrousel{
     width: 100%; 
-    height: 650px; 
-    object-fit: cover;
+    max-width: 100%; 
+    height: auto; 
+    display: grid;
 }
-#carouselExampleAutoplaying img{
-    width: 100%; 
-    height: 650px; 
-    object-fit: cover;
+#carrousel img{
+    max-width: 100%; 
+    height: auto; 
 }
-.contenedor-padre{
+.contenedor-padre {
     display: flex;
+    justify-content: space-around;
     margin-top: 50px;
     margin-left: 100px;
-}
-.producto1{
-    width: 70%;
-}
-.producto2{
-    width: 70%;
-}
-.producto3{
-    width: 70%;
-}
-.producto4{
-    width: 70%;
+    flex-wrap: nowrap;
 }
 
-.titulo-img{
+.producto1,
+.producto2,
+.producto3,
+.producto4 {
+    width: 70%;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor-padre {
+        margin-left: 0; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .producto1,
+    .producto2,
+    .producto3,
+    .producto4 {
+        width: calc(50% - 20px); 
+        margin: 10px; 
+    }
+    
+    .button,
+    input[type="submit"],
+    .contenedor-padre button {
+        margin: 10px 0; 
+    }
+
+    #mail {
+        padding: 5px 20px; 
+    }
+}
+
+.titulo-img {
     font-family: "Montserrat", sans-serif;
 }
 
-.button, input[type="submit"]{
-        border-radius: 10px;
-        padding: 5px 15px;
-        background-color: black;
-        color:white;
+.button,
+input[type="submit"] {
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
 }
 
-.contenedor-padre button{
-        border-radius: 10px;
-        padding: 5px 15px;
-        background-color: black;
-        color:white;
+.contenedor-padre button {
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
 }
 
-#mail{
+#mail {
     text-align: center;
     border-radius: 10px; 
-    padding: 5px 100px;
+    padding: 5px 20px;
 }
 
 /*link redes sociales */
@@ -212,29 +236,26 @@ h3{
 }
 .contenedor-productos{
     display: flex;
-    margin-top: 100px;
-    margin-left: 100px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 20px;
 }
-.productowine{
-    width: 80%;
-}
-.productobirra{
-    width: 80%;
-}
-.productogin{
-    width: 80%;
-}
-.productocheers{
-    width: 80%;
-}
-.productomate{
-    width: 80%;
+.productowine,
+.productobirra,
+.productogin,
+.productocheers,
+.productomate {
+    width: 80%; 
+    max-width: 300px; 
+    margin: 20px; 
 }
 .contenedor-productos button{
     border-radius: 10px;
     padding: 5px 15px;
     background-color: black;
     color:white;
+    width: 100%; 
+    margin-top: 10px; 
 }
 
 /* solapa contacto */  
@@ -311,4 +332,30 @@ h3{
 
 .contenedorempresas{
     text-align: center;   
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+    font-size: 14px; 
+    margin-top: 20px;
+}
+footer a {
+    color: #fff; 
+    text-decoration: none; 
+    margin: 0 10px; 
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        font-size: 12px;
+    }
+    
+    footer a {
+        display: block; 
+        margin: 5px auto; 
+    }
 }
