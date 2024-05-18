@@ -1,0 +1,14 @@
+.contenedor-carrousel{
+    max-width: 100%;     
+    overflow: hidden;
+  }
+  #carrousel{
+      width: 100%; 
+      max-width: 100%; 
+      height: auto; 
+      display: grid;
+  }
+  #carrousel img{
+      max-width: 100%; 
+      height: auto; 
+  }
